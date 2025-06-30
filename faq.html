@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DhanYatra - Fantasy Stock Trading Game</title>
+  <title>DhanYatra - FAQ</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Global CSS variables - keep these consistent across all pages */
+    /* Paste the entire CSS from the index.html file here */
+    /* Ensure the :root variables and all shared styles are present */
+    /* Only include the relevant sections in the body */
+
     :root {
       --primary: #1c1f2a;
       --secondary: #2d3246;
@@ -165,7 +168,7 @@
       outline-offset: 3px;
     }
 
-    /* Hero Section - Homepage specific */
+    /* Hero Section - Homepage specific (not used here, but keeping for consistency) */
     .hero {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--light);
@@ -174,10 +177,10 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 60px;
-      display: flex; /* Use flexbox for layout */
+      display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 80vh; /* Make hero section taller */
+      min-height: 80vh;
     }
 
     .hero::before {
@@ -209,14 +212,14 @@
     }
 
     .hero-content {
-      max-width: 1000px; /* Increased max-width */
+      max-width: 1000px;
       margin: 0 auto;
       position: relative;
       z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px; /* Gap between text and image/buttons */
+      gap: 30px;
     }
 
     .hero-main-text {
@@ -224,7 +227,7 @@
     }
 
     .hero h1 {
-      font-size: 4rem; /* Larger for impact */
+      font-size: 4rem;
       margin-bottom: 25px;
       font-weight: 700;
       font-family: 'Playfair Display', serif;
@@ -233,17 +236,38 @@
     }
 
     .hero p {
-      font-size: 1.5rem; /* Larger */
+      font-size: 1.5rem;
       max-width: 700px;
       margin: 0 auto 40px;
       opacity: 0.95;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 40px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        animation: fadeInScale 1s ease-out forwards;
+    }
+
+    .hero-visual img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .hero-visual img:hover {
+        transform: scale(1.03);
     }
 
     .download-buttons {
       display: flex;
       justify-content: center;
       gap: 25px;
-      margin-top: 40px; /* Space after visual */
+      margin-top: 40px;
       flex-wrap: wrap;
     }
 
@@ -296,7 +320,7 @@
         padding: 100px 5%;
         max-width: 1200px;
         margin: 0 auto;
-        margin-bottom: 60px; /* Consistent spacing between sections */
+        margin-bottom: 60px;
     }
 
     .section-title {
@@ -387,7 +411,7 @@
     }
 
     /* Prize Grid (used on Prizes page) */
-    .prizes-section { /* Added a class to distinguish from the hero gradient effect */
+    .prizes-section {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--light);
       position: relative;
@@ -709,7 +733,7 @@
     }
 
     /* FAQ Section (used on FAQ page) */
-    .faq-section { /* Added a class to distinguish */
+    .faq-section {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--light);
     }
@@ -1107,9 +1131,9 @@
 
       <nav>
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="how-to-play.html">How to Play</a></li>
-          <li><a href="prizes.html">Prizes</a></li>
+          <li><a href="prizes.html" class="active">Prizes</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
@@ -1119,111 +1143,90 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-main-text">
-        <h1>Trade, Compete, Conquer: Your Path to Financial Fun!</h1>
-        <p>Dive into the world of fantasy stock trading where your financial acumen can win you **real cash prizes** – all with a minimal entry fee!</p>
+  <main>
+    <section class="faq-section section-padding">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions about DhanYatra, how to play, prizes, and more.</p>
       </div>
 
-      <div class="download-buttons">
-        <a href="#" class="download-btn">
-          <i class="fab fa-apple"></i>
-          <div class="download-text">
-            <span>Download on the</span>
-            <span>App Store</span>
+      <div class="faq-container">
+        <div class="faq-grid">
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">
+              How much does it cost to play? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Each weekly tournament has an entry fee of just Rs. 11. There are no hidden fees or additional costs to play. Your one-time entry covers the full tournament period.
+            </div>
           </div>
-        </a>
-        <a href="#" class="download-btn">
-          <i class="fab fa-google-play"></i>
-          <div class="download-text">
-            <span>GET IT ON</span>
-            <span>Google Play</span>
+
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">
+              How do I withdraw my winnings? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Withdrawing your winnings is simple and secure. You can easily transfer your prize money directly to your registered bank account or preferred mobile wallet. Withdrawals are typically processed within 24 hours of your request.
+            </div>
           </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <section class="section-padding" id="about">
-    <div class="section-title">
-      <h2>Unleash Your Inner Trader</h2>
-      <p>DhanYatra is more than just a game; it's your playground to master the stock market without real-world risk. Learn, strategize, and compete in our thrilling weekly tournaments!</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <h3>Simulated Market Data</h3>
-        <p>Trade with virtual money using real-time stock market data from a wide range of companies.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-coins"></i>
-        </div>
-        <h3>Risk-Free Learning</h3>
-        <p>Experiment with different strategies, buy and sell stocks, and see your portfolio grow without any financial exposure.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-bullhorn"></i>
-        </div>
-        <h3>Exciting Tournaments</h3>
-        <p>Join competitive weekly tournaments for a small fee and climb the leaderboard to win attractive cash prizes.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials section-padding" id="testimonials">
-    <div class="section-title">
-      <h2>What Our Winners Say</h2>
-      <p>Hear from players who have turned their market insights into real winnings!</p>
-    </div>
-
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          "I won ₹5000 in my second week! This app makes stock trading fun and rewarding. Highly recommend to anyone interested in the stock market."
-        </div>
-        <div class="testimonial-author">
-          <div class="author-avatar">RS</div>
-          <div class="author-info">
-            <h4>Raj Sharma</h4>
-            <p>Won ₹5000</p>
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">
+              Can I play with friends? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Absolutely! DhanYatra allows you to create private tournaments. Invite your friends, compete in your own league, and see who truly has the best stock market intuition among your group!
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          "The referral program is amazing. I've earned over ₹2000 just by inviting friends. The app is easy to use and the prizes are real!"
-        </div>
-        <div class="testimonial-author">
-          <div class="author-avatar">PK</div>
-          <div class="author-info">
-            <h4>Priya Karki</h4>
-            <p>Top Referrer</p>
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">
+              Is this real stock trading? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              DhanYatra is a fantasy stock trading game. While you trade with virtual money, the stock prices and market data are based on real-time movements from actual stock markets. This means you get a realistic trading experience without any financial risk.
+            </div>
+          </div>
+
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">
+              How do referrals work? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Our referral program is designed to reward you for spreading the word! For every friend you refer who successfully registers and plays their first tournament, you'll earn a bonus of ₹50. There's no limit to how many friends you can refer, so keep inviting!
+            </div>
+          </div>
+
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">
+              When are tournaments held? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              DhanYatra runs exciting weekly tournaments! Each tournament kicks off every Monday morning and concludes on Friday when the real stock markets close for the week. This gives you a full week to strategize and trade.
+            </div>
+          </div>
+
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">
+              What if I have an issue or need support? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              We're here to help! If you encounter any issues, have questions, or need support, please visit our <a href="contact-us.html" style="color: var(--accent-light); text-decoration: underline;">Contact Us</a> page or email us directly at support@dhanyatra.com. Our support team is ready to assist you.
+            </div>
+          </div>
+
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">
+              How are winners decided? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Winners are determined by the final value of their virtual portfolio at the end of each weekly tournament. The players with the highest-performing portfolios on the leaderboard take home the prizes!
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          "As a finance student, this is the perfect way to test my knowledge without risking real money. And winning cash is a great bonus!"
-        </div>
-        <div class="testimonial-author">
-          <div class="author-avatar">AS</div>
-          <div class="author-info">
-            <h4>Anil Shrestha</h4>
-            <p>Finance Student</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="footer-container">
@@ -1281,9 +1284,30 @@
   </footer>
 
   <script>
-    // No specific JS needed for homepage smooth scroll as sections are removed
-    // You might add an active class based on URL for the nav bar in a real app
-    // For now, the 'active' class on 'index.html' is hardcoded.
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.classList.toggle('active');
+        }
+      });
+    });
+
+    // Set active class for navigation
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop();
+      document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
   </script>
 </body>
 </html>

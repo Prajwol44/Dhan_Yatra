@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DhanYatra - Fantasy Stock Trading Game</title>
+  <title>DhanYatra - Prizes</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Global CSS variables - keep these consistent across all pages */
+    /* Paste the entire CSS from the index.html file here */
+    /* Ensure the :root variables and all shared styles are present */
+    /* Only include the relevant sections in the body */
+
     :root {
       --primary: #1c1f2a;
       --secondary: #2d3246;
@@ -165,7 +168,7 @@
       outline-offset: 3px;
     }
 
-    /* Hero Section - Homepage specific */
+    /* Hero Section - Homepage specific (not used here, but keeping for consistency) */
     .hero {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--light);
@@ -174,10 +177,10 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 60px;
-      display: flex; /* Use flexbox for layout */
+      display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 80vh; /* Make hero section taller */
+      min-height: 80vh;
     }
 
     .hero::before {
@@ -209,14 +212,14 @@
     }
 
     .hero-content {
-      max-width: 1000px; /* Increased max-width */
+      max-width: 1000px;
       margin: 0 auto;
       position: relative;
       z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px; /* Gap between text and image/buttons */
+      gap: 30px;
     }
 
     .hero-main-text {
@@ -224,7 +227,7 @@
     }
 
     .hero h1 {
-      font-size: 4rem; /* Larger for impact */
+      font-size: 4rem;
       margin-bottom: 25px;
       font-weight: 700;
       font-family: 'Playfair Display', serif;
@@ -233,17 +236,38 @@
     }
 
     .hero p {
-      font-size: 1.5rem; /* Larger */
+      font-size: 1.5rem;
       max-width: 700px;
       margin: 0 auto 40px;
       opacity: 0.95;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 40px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        animation: fadeInScale 1s ease-out forwards;
+    }
+
+    .hero-visual img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .hero-visual img:hover {
+        transform: scale(1.03);
     }
 
     .download-buttons {
       display: flex;
       justify-content: center;
       gap: 25px;
-      margin-top: 40px; /* Space after visual */
+      margin-top: 40px;
       flex-wrap: wrap;
     }
 
@@ -296,7 +320,7 @@
         padding: 100px 5%;
         max-width: 1200px;
         margin: 0 auto;
-        margin-bottom: 60px; /* Consistent spacing between sections */
+        margin-bottom: 60px;
     }
 
     .section-title {
@@ -387,7 +411,7 @@
     }
 
     /* Prize Grid (used on Prizes page) */
-    .prizes-section { /* Added a class to distinguish from the hero gradient effect */
+    .prizes-section {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--light);
       position: relative;
@@ -709,7 +733,7 @@
     }
 
     /* FAQ Section (used on FAQ page) */
-    .faq-section { /* Added a class to distinguish */
+    .faq-section {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--light);
     }
@@ -1107,9 +1131,9 @@
 
       <nav>
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="how-to-play.html">How to Play</a></li>
-          <li><a href="prizes.html">Prizes</a></li>
+          <li><a href="prizes.html" class="active">Prizes</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
@@ -1119,111 +1143,81 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-main-text">
-        <h1>Trade, Compete, Conquer: Your Path to Financial Fun!</h1>
-        <p>Dive into the world of fantasy stock trading where your financial acumen can win you **real cash prizes** – all with a minimal entry fee!</p>
+  <main>
+    <section class="prizes-section section-padding">
+      <div class="section-title">
+        <h2>Weekly Prize Distribution</h2>
+        <p>Compete in our weekly tournaments and secure your spot among the top winners!</p>
       </div>
 
-      <div class="download-buttons">
-        <a href="#" class="download-btn">
-          <i class="fab fa-apple"></i>
-          <div class="download-text">
-            <span>Download on the</span>
-            <span>App Store</span>
+      <div class="prizes-container">
+        <div class="prize-grid">
+          <div class="prize-card">
+            <div class="prize-rank">1st</div>
+            <div class="prize-amount">₹5,000</div>
+            <p>Become the Weekly Champion and claim the top prize!</p>
           </div>
-        </a>
-        <a href="#" class="download-btn">
-          <i class="fab fa-google-play"></i>
-          <div class="download-text">
-            <span>GET IT ON</span>
-            <span>Google Play</span>
+
+          <div class="prize-card">
+            <div class="prize-rank">2nd</div>
+            <div class="prize-amount">₹3,000</div>
+            <p>A fantastic reward for being the runner-up in our intense competition!</p>
           </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <section class="section-padding" id="about">
-    <div class="section-title">
-      <h2>Unleash Your Inner Trader</h2>
-      <p>DhanYatra is more than just a game; it's your playground to master the stock market without real-world risk. Learn, strategize, and compete in our thrilling weekly tournaments!</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <h3>Simulated Market Data</h3>
-        <p>Trade with virtual money using real-time stock market data from a wide range of companies.</p>
-      </div>
+          <div class="prize-card">
+            <div class="prize-rank">3rd</div>
+            <div class="prize-amount">₹1,000</div>
+            <p>Secure the third spot and walk away with a significant prize.</p>
+          </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-coins"></i>
-        </div>
-        <h3>Risk-Free Learning</h3>
-        <p>Experiment with different strategies, buy and sell stocks, and see your portfolio grow without any financial exposure.</p>
-      </div>
+          <div class="prize-card">
+            <div class="prize-rank">4th-10th</div>
+            <div class="prize-amount">₹200</div>
+            <p>We reward a wide range of top performers. Even if you don't make the top 3, you can still win!</p>
+          </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-bullhorn"></i>
-        </div>
-        <h3>Exciting Tournaments</h3>
-        <p>Join competitive weekly tournaments for a small fee and climb the leaderboard to win attractive cash prizes.</p>
-      </div>
-    </div>
-  </section>
+          <div class="prize-card">
+            <div class="prize-rank">Bonus</div>
+            <div class="prize-amount">₹50</div>
+            <p>Earn a bonus for every friend you successfully refer to DhanYatra!</p>
+          </div>
 
-  <section class="testimonials section-padding" id="testimonials">
-    <div class="section-title">
-      <h2>What Our Winners Say</h2>
-      <p>Hear from players who have turned their market insights into real winnings!</p>
-    </div>
-
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          "I won ₹5000 in my second week! This app makes stock trading fun and rewarding. Highly recommend to anyone interested in the stock market."
-        </div>
-        <div class="testimonial-author">
-          <div class="author-avatar">RS</div>
-          <div class="author-info">
-            <h4>Raj Sharma</h4>
-            <p>Won ₹5000</p>
+          <div class="prize-card">
+            <div class="prize-rank">Surprise</div>
+            <div class="prize-amount">Mystery Prizes</div>
+            <p>Keep an eye out for special events and surprise bonuses throughout the year!</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          "The referral program is amazing. I've earned over ₹2000 just by inviting friends. The app is easy to use and the prizes are real!"
+    <section class="referral section-padding">
+        <div class="section-title">
+            <h2>Invite Friends & Earn More</h2>
+            <p>Boost your winnings beyond the leaderboard! Get bonus cash for every friend you invite to DhanYatra.</p>
         </div>
-        <div class="testimonial-author">
-          <div class="author-avatar">PK</div>
-          <div class="author-info">
-            <h4>Priya Karki</h4>
-            <p>Top Referrer</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          "As a finance student, this is the perfect way to test my knowledge without risking real money. And winning cash is a great bonus!"
+        <div class="referral-content">
+            <div class="referral-box">
+                <h3>Earn ₹50 for Each Friend</h3>
+                <p>Share your unique referral code with friends and earn ₹50 when they join and play their first tournament. It's a win-win!</p>
+
+                <div class="referral-features">
+                    <div class="referral-feature">
+                        <i class="fas fa-gift"></i>
+                        <h4>Instant Bonus</h4>
+                        <p>Get ₹50 credited immediately to your account after your friend's first game.</p>
+                    </div>
+                    <div class="referral-feature">
+                        <i class="fas fa-user-friends"></i>
+                        <h4>No Limit</h4>
+                        <p>There's no cap! Invite as many friends as you want and keep expanding your earnings.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="testimonial-author">
-          <div class="author-avatar">AS</div>
-          <div class="author-info">
-            <h4>Anil Shrestha</h4>
-            <p>Finance Student</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="footer-container">
@@ -1281,9 +1275,17 @@
   </footer>
 
   <script>
-    // No specific JS needed for homepage smooth scroll as sections are removed
-    // You might add an active class based on URL for the nav bar in a real app
-    // For now, the 'active' class on 'index.html' is hardcoded.
+    // Placeholder for JS specific to Prizes page if needed.
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop();
+      document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
   </script>
 </body>
 </html>
