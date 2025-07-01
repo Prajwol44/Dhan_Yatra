@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions - DhanYatra</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="images/logo.png"> 
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1c1f2a;
+      --secondary: #2d3246;
+      --accent: #c0a062;
+      --accent-light: #e0c78a;
+      --light: #f0f2f5;
+      --dark: #12141c;
+      --success: #4caf50;
+      --text: #2c2f3a;
+      --text-light: #6a6d7c;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      --transition: all 0.3s ease;
+      --glass: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
+      background-attachment: fixed;
+      font-size: 1.05rem;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: rgba(28, 31, 42, 0.95);
+      color: var(--light);
+      padding: 15px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--light);
+    }
+
+    .logo-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      box-shadow: 0 4px 15px rgba(192, 160, 98, 0.3);
+      transition: var(--transition);
+    }
+
+    .logo-icon img {
+      width: 70%;
+      height: auto;
+      object-fit: contain;
+      transition: var(--transition);
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+      padding: 5px 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--accent-light);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-light);
+      transition: var(--transition);
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      color: var(--dark);
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(192, 160, 98, 0.3);
+      outline: none;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(192, 160, 98, 0.4);
+    }
+
+    .cta-button:focus-visible {
+      outline: 2px solid var(--accent-light);
+      outline-offset: 3px;
+    }
+
+    /* Hero Section */
+    .terms-hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--light);
+      padding: 120px 5% 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 60px;
+    }
+
+    .terms-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(192, 160, 98, 0.1) 0%, transparent 40%);
+      z-index: 1;
+    }
+
+    .terms-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .terms-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1.5px;
+      line-height: 1.2;
+    }
+
+    .terms-hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Terms Container - Fixed Layout */
+    .terms-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    .terms-container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      margin-bottom: 80px;
+      align-items: start;
+    }
+
+    .terms-nav {
+      position: sticky;
+      top: 120px; /* Increased top spacing */
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      height: calc(100vh - 140px); /* Fixed height */
+      overflow-y: auto; /* Added scroll for long content */
+      z-index: 99; /* Ensure it stays behind content */
+    }
+
+    .terms-nav h3 {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(192, 160, 98, 0.2);
+    }
+
+    .terms-nav ul {
+      list-style: none;
+    }
+
+    .terms-nav li {
+      margin-bottom: 15px;
+    }
+
+    .terms-nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: var(--transition);
+      display: block;
+      padding: 8px 0;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .terms-nav a:hover,
+    .terms-nav a.active {
+      color: var(--accent);
+    }
+
+    .terms-nav a::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .terms-nav a:hover::before,
+    .terms-nav a.active::before {
+      opacity: 1;
+      left: -12px;
+    }
+
+    .terms-content {
+      background: white;
+      border-radius: 15px;
+      padding: 50px;
+      box-shadow: var(--shadow);
+      min-height: 80vh;
+      position: relative; /* Added for z-index control */
+      z-index: 100; /* Higher than sidebar */
+    }
+
+    .terms-section {
+      margin-bottom: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative; /* Ensure content is above sidebar */
+      z-index: 101; /* Higher than content container */
+    }
+
+    .terms-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .terms-section h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+      font-family: 'Playfair Display', serif;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .terms-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .terms-section h3 {
+      font-size: 1.4rem;
+      color: var(--accent);
+      margin: 30px 0 15px;
+      font-weight: 600;
+    }
+
+    .terms-section p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .terms-section ul {
+      margin: 20px 0;
+      padding-left: 25px;
+    }
+
+    .terms-section li {
+      margin-bottom: 12px;
+      color: var(--text-light);
+      position: relative;
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    .terms-section li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-light);
+    }
+
+    .highlight-box {
+      background: rgba(192, 160, 98, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 25px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: var(--light);
+      padding: 80px 5% 40px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-logo .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo p {
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-link {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      transition: var(--transition);
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .social-link:hover {
+      background: var(--accent);
+      color: var(--dark);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 6px 15px rgba(192, 160, 98, 0.3);
+    }
+
+    .footer-links h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: var(--light);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      transition: var(--transition);
+      display: block;
+      font-size: 0.98rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-light);
+      transform: translateX(8px);
+    }
+
+    .footer-links li i {
+        margin-right: 8px;
+        color: var(--accent);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 50px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .terms-hero h1 {
+          font-size: 3rem;
+      }
+      .terms-hero p {
+          font-size: 1.2rem;
+      }
+      
+      .terms-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .terms-nav {
+        position: static;
+        order: 2;
+        height: auto;
+        max-height: 300px;
+      }
+      
+      .terms-content {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .terms-hero {
+        padding: 100px 5% 60px;
+      }
+
+      .terms-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .terms-hero p {
+        font-size: 1.1rem;
+      }
+
+      .terms-content {
+        padding: 30px;
+      }
+      
+      .terms-wrapper {
+        padding: 0 3%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .terms-hero h1 {
+          font-size: 2.2rem;
+      }
+      .terms-section h2 {
+          font-size: 1.8rem;
+      }
+      .footer-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+      }
+      .footer-logo {
+          align-items: center;
+      }
+      .social-links {
+          justify-content: center;
+      }
+      .footer-links ul {
+          padding-left: 0;
+      }
+      .footer-links a {
+          text-align: center;
+      }
+      .footer-links a:hover {
+          transform: translateX(0);
+      }
+      
+      .terms-content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="images/logo.png">
+        </div>
+        <div class="logo-text">DhanYatra</div>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-to-play.html">How to Play</a></li>
+          <li><a href="prizes.html">Prizes</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="#" class="active">Terms</a></li>
+        </ul>
+      </nav>
+
+      <button class="cta-button">Download App</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="terms-hero">
+      <div class="terms-hero-content">
+        <h1>Terms and Conditions</h1>
+        <p>Please read these terms carefully before using DhanYatra</p>
+      </div>
+    </section>
+
+    <!-- Terms Content -->
+    <div class="terms-wrapper">
+      <div class="terms-container">
+        <!-- Navigation Sidebar -->
+        <nav class="terms-nav">
+          <h3>Table of Contents</h3>
+          <ul>
+            <li><a href="#introduction" class="active">Introduction</a></li>
+            <li><a href="#acceptance">Acceptance of Terms</a></li>
+            <li><a href="#eligibility">Eligibility</a></li>
+            <li><a href="#account">Account Registration</a></li>
+            <li><a href="#fees">Entry Fees and Prizes</a></li>
+            <li><a href="#game-rules">Game Rules</a></li>
+            <li><a href="#user-conduct">User Conduct</a></li>
+            <li><a href="#intellectual">Intellectual Property</a></li>
+            <li><a href="#termination">Termination</a></li>
+            <li><a href="#warranties">Disclaimer of Warranties</a></li>
+            <li><a href="#liability">Limitation of Liability</a></li>
+            <li><a href="#governing">Governing Law</a></li>
+            <li><a href="#changes">Changes to Terms</a></li>
+            <li><a href="#contact">Contact Information</a></li>
+          </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="terms-content">
+          <section id="introduction" class="terms-section">
+            <h2>Introduction</h2>
+            <p>Welcome to DhanYatra! These Terms and Conditions ("Terms") govern your use of our fantasy stock trading platform and services ("Service"). By accessing or using DhanYatra, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not use our Service.</p>
+            <p>DhanYatra is a skill-based fantasy stock trading platform where users create virtual portfolios using real stock market data. The platform is designed for entertainment and educational purposes only.</p>
+            
+            <div class="highlight-box">
+              <p>Please read these Terms carefully as they contain important information about your legal rights, remedies, and obligations.</p>
+            </div>
+          </section>
+
+          <section id="acceptance" class="terms-section">
+            <h2>Acceptance of Terms</h2>
+            <p>By creating an account, accessing, or using the DhanYatra platform, you:</p>
+            <ul>
+              <li>Confirm that you are at least 18 years old and legally competent to enter into a binding agreement</li>
+              <li>Acknowledge that you have read, understood, and agree to be bound by these Terms</li>
+              <li>Consent to the collection, use, and disclosure of your personal information as described in our Privacy Policy</li>
+              <li>Agree to comply with all applicable laws and regulations</li>
+            </ul>
+            <p>If you are using DhanYatra on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.</p>
+          </section>
+
+          <section id="eligibility" class="terms-section">
+            <h2>Eligibility</h2>
+            <p>To use DhanYatra, you must meet the following criteria:</p>
+            <ul>
+              <li>Be at least 18 years old</li>
+              <li>Be a resident of Nepal</li>
+              <li>Not be restricted by law from participating in games of skill</li>
+              <li>Not be an employee, contractor, or immediate family member of DhanYatra or its affiliates</li>
+            </ul>
+            <p>We reserve the right to verify your eligibility at any time. Failure to meet these requirements may result in suspension or termination of your account.</p>
+            
+            <h3>Prohibited Jurisdictions</h3>
+            <p>Residents of certain jurisdictions where fantasy trading games are prohibited by law are not permitted to use DhanYatra. By using our Service, you represent that your participation is legal in your jurisdiction.</p>
+          </section>
+
+          <section id="account" class="terms-section">
+            <h2>Account Registration</h2>
+            <p>To access certain features of DhanYatra, you must create an account. When creating an account, you agree to:</p>
+            <ul>
+              <li>Provide accurate, current, and complete information</li>
+              <li>Maintain and promptly update your account information</li>
+              <li>Maintain the security of your account credentials</li>
+              <li>Not share your account credentials with others</li>
+              <li>Accept responsibility for all activities that occur under your account</li>
+            </ul>
+            
+            <h3>Account Security</h3>
+            <p>You are responsible for maintaining the confidentiality of your account password and for all activities that occur under your account. Notify us immediately of any unauthorized use of your account or any other security breach.</p>
+            
+            <h3>Account Termination</h3>
+            <p>We reserve the right to suspend or terminate your account at our sole discretion, without notice, if we believe you have violated these Terms or applicable laws.</p>
+          </section>
+
+          <section id="fees" class="terms-section">
+            <h2>Entry Fees and Prizes</h2>
+            <p>Participation in DhanYatra competitions requires payment of an entry fee. By entering a competition, you agree to the following:</p>
+            <ul>
+              <li>Entry fees are non-refundable, except as required by law</li>
+              <li>Prizes are awarded based on the skill of participants</li>
+              <li>We reserve the right to modify prize structures at any time</li>
+              <li>All prizes are subject to applicable tax withholdings</li>
+              <li>Prize winners must provide valid identification and tax information to claim prizes</li>
+            </ul>
+            
+            <div class="highlight-box">
+              <p>Participation in DhanYatra involves financial risk. Please play responsibly and only with funds you can afford to lose. The entry fee is Rs. 11 per competition.</p>
+            </div>
+            
+            <h3>Withdrawals</h3>
+            <p>Withdrawal of prize money is subject to verification and may take up to 7 business days to process. We may require additional documentation to verify your identity before processing withdrawals.</p>
+          </section>
+
+          <section id="game-rules" class="terms-section">
+            <h2>Game Rules</h2>
+            <p>All participants must adhere to the following game rules:</p>
+            <ul>
+              <li>Portfolios must be created before the market opens</li>
+              <li>Only listed stocks on NEPSE are eligible for trading</li>
+              <li>Portfolio values are calculated based on closing prices</li>
+              <li>Leaderboard positions are determined by portfolio performance</li>
+              <li>Any attempt to manipulate the game or use automated systems will result in disqualification</li>
+            </ul>
+            
+            <h3>Fair Play</h3>
+            <p>We prohibit any form of cheating, including but not limited to:</p>
+            <ul>
+              <li>Collusion with other players</li>
+              <li>Use of bots or automated systems</li>
+              <li>Exploitation of software vulnerabilities</li>
+              <li>Multiple accounts for the same individual</li>
+            </ul>
+            <p>Violations of fair play policies may result in permanent account suspension and forfeiture of any prizes.</p>
+          </section>
+
+          <section id="user-conduct" class="terms-section">
+            <h2>User Conduct</h2>
+            <p>While using DhanYatra, you agree not to:</p>
+            <ul>
+              <li>Violate any applicable laws or regulations</li>
+              <li>Infringe upon the intellectual property rights of others</li>
+              <li>Harass, threaten, or intimidate other users</li>
+              <li>Transmit any viruses, malware, or harmful code</li>
+              <li>Attempt to gain unauthorized access to our systems</li>
+              <li>Engage in fraudulent activity</li>
+            </ul>
+            
+            <h3>Content Standards</h3>
+            <p>You are solely responsible for any content you post on DhanYatra. You agree not to post content that:</p>
+            <ul>
+              <li>Is defamatory, obscene, or offensive</li>
+              <li>Promotes illegal activities</li>
+              <li>Violates the privacy of others</li>
+              <li>Contains commercial solicitations</li>
+            </ul>
+          </section>
+
+          <section id="intellectual" class="terms-section">
+            <h2>Intellectual Property</h2>
+            <p>All rights, title, and interest in and to the DhanYatra platform, including all content, features, and functionality, are and will remain the exclusive property of DhanYatra and its licensors.</p>
+            
+            <h3>License to Use</h3>
+            <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use DhanYatra for your personal, non-commercial entertainment purposes.</p>
+            
+            <h3>User Content</h3>
+            <p>By posting content on DhanYatra, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display such content in connection with our Service.</p>
+          </section>
+
+          <section id="termination" class="terms-section">
+            <h2>Termination</h2>
+            <p>We may terminate or suspend your account and access to DhanYatra immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.</p>
+            
+            <p>Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service or contact us to request account deletion.</p>
+            
+            <h3>Effect of Termination</h3>
+            <p>Termination of your account will result in:</p>
+            <ul>
+              <li>Immediate loss of access to DhanYatra</li>
+              <li>Forfeiture of any unused entry fees or prizes</li>
+              <li>Deletion of your account information, subject to our data retention policies</li>
+            </ul>
+          </section>
+
+          <section id="warranties" class="terms-section">
+            <h2>Disclaimer of Warranties</h2>
+            <p>DhanYatra is provided on an "AS IS" and "AS AVAILABLE" basis. We expressly disclaim all warranties of any kind, whether express or implied, including but not limited to:</p>
+            <ul>
+              <li>Warranties of merchantability</li>
+              <li>Fitness for a particular purpose</li>
+              <li>Non-infringement</li>
+              <li>That the Service will be uninterrupted, timely, secure, or error-free</li>
+              <li>That the results obtained from using the Service will be accurate or reliable</li>
+            </ul>
+            
+            <div class="highlight-box">
+              <p>DhanYatra is for entertainment purposes only. The platform should not be considered financial advice. Past performance does not guarantee future results.</p>
+            </div>
+          </section>
+
+          <section id="liability" class="terms-section">
+            <h2>Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, in no event shall DhanYatra, its directors, employees, partners, agents, suppliers, or affiliates be liable for:</p>
+            <ul>
+              <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+              <li>Loss of profits, data, use, goodwill, or other intangible losses</li>
+              <li>Damages resulting from your access to or use of the Service</li>
+              <li>Unauthorized access to or alteration of your transmissions or data</li>
+              <li>Statements or conduct of any third party on the Service</li>
+            </ul>
+            
+            <h3>Maximum Liability</h3>
+            <p>Our total liability to you for any claims under these Terms, including for any implied warranties, is limited to the amount you have paid us to use the Service in the past six months.</p>
+          </section>
+
+          <section id="governing" class="terms-section">
+            <h2>Governing Law</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of Nepal, without regard to its conflict of law provisions.</p>
+            
+            <p>You agree that any legal action or proceeding between you and DhanYatra will be brought exclusively in the courts located in Kathmandu, Nepal.</p>
+            
+            <h3>Dispute Resolution</h3>
+            <p>In the event of any dispute arising out of or in connection with these Terms, we encourage you to first contact us directly to seek a resolution. If we cannot resolve the dispute informally, we agree to attempt mediation before pursuing litigation.</p>
+            </section>
+
+        <section id="changes" class="terms-section">
+          <h2>Changes to Terms</h2>
+          <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect.</p>
+          
+          <p>What constitutes a material change will be determined at our sole discretion. By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you must stop using the Service.</p>
+          
+          <h3>Notification of Changes</h3>
+          <p>We will notify you of changes to these Terms through our platform, via email, or through other reasonable means. It is your responsibility to review these Terms periodically for changes.</p>
+        </section>
+
+        <section id="contact" class="terms-section">
+          <h2>Contact Information</h2>
+          <p>If you have any questions about these Terms, please contact us:</p>
+          <ul>
+            <li>Email: support@dhanyatra.com</li>
+            <li>Phone: +977 9841XXXXXX</li>
+            <li>Address: Kathmandu, Nepal</li>
+          </ul>
+          
+          <p>We strive to respond to all inquiries within 48 business hours.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <img src="images/logo.png">
+          </div>
+          <div class="logo-text">DhanYatra</div>
+        </a>
+        <p>Fantasy stock trading platform where you can win real cash prizes. Entry fee: Only Rs. 11!</p>
+
+        <div class="social-links">
+          <a href="facebook.com/profile.php?id=61577630865234" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></i></a>
+          <a href="https://www.instagram.com/dhanyatra.np/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-to-play.html">How to Play</a></li>
+          <li><a href="prizes.html">Prizes</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="terms-conditions.html" class="active">Terms & Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> support@dhanyatra.com</li>
+          <li><i class="fas fa-phone"></i> +977 9841XXXXXX</li>
+          <li><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      &copy; 2025 DhanYatra. All rights reserved. This game involves financial risk. Please play responsibly.
+    </div>
+  </footer>
+
+  <script>
+    // Set active class for navigation
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop();
+      document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+      
+      // Scroll to section and highlight in sidebar
+      const sidebarLinks = document.querySelectorAll('.terms-nav a');
+      const sections = document.querySelectorAll('.terms-section');
+      
+      function activateNavLink() {
+        let current = '';
+        let closestDistance = Infinity;
+        
+        // Find the section closest to the center of the viewport
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const distanceFromCenter = Math.abs(rect.top + rect.height/2 - window.innerHeight/2);
+          
+          if (distanceFromCenter < closestDistance) {
+            closestDistance = distanceFromCenter;
+            current = section.getAttribute('id');
+          }
+        });
+        
+        sidebarLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', activateNavLink);
+      
+      // Initialize
+      activateNavLink();
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
