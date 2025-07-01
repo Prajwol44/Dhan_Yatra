@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DhanYatra - Fantasy Stock Trading Game</title>
+
+  <!-- Favicon (Logo in Browser Tab) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="images/logo.png"> 
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -76,34 +82,38 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
       color: var(--light);
-    }
+      }
 
-    .logo-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+      .logo-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background-color: var(--accent);
-    }
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      box-shadow: 0 4px 15px rgba(192, 160, 98, 0.3);
+      transition: var(--transition);
+      }
 
-    .logo-icon img {
-      width: 24px;
-      height: 24px;
+      .logo-icon img {
+      width: 70%;
+      height: auto;
       object-fit: contain;
-    }
+      transition: var(--transition);
+      }
 
-    .logo-text {
+      .logo-text {
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-family: 'Playfair Display', serif;
       letter-spacing: 1px;
-    }
+      }
+
 
     nav ul {
       display: flex;
@@ -1100,7 +1110,7 @@
     <div class="header-container">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <i class="fas fa-chart-line"></i>
+          <img src="images/logo.png">
         </div>
         <div class="logo-text">DhanYatra</div>
       </a>
@@ -1230,17 +1240,16 @@
       <div class="footer-logo">
         <a href="index.html" class="logo">
           <div class="logo-icon">
-            <i class="fas fa-chart-line"></i>
+            <img src="images/logo.png">
           </div>
           <div class="logo-text">DhanYatra</div>
         </a>
         <p>Fantasy stock trading platform where you can win real cash prizes. Entry fee: Only Rs. 11!</p>
 
         <div class="social-links">
-          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/dhanyatra.np/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
