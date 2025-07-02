@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DhanYatra - Fantasy Stock Trading Game</title>
+  <title>DhanYatra</title>
 
   <!-- Favicon (Logo in Browser Tab) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Global CSS variables - keep these consistent across all pages */
+    
     :root {
       --primary: #1c1f2a;
       --secondary: #2d3246;
@@ -41,27 +41,14 @@
       color: var(--text);
       font-family: 'Montserrat', sans-serif;
       line-height: 1.7;
-      background-image: linear-gradient(rgba(240, 242, 245, 0.95), rgba(240, 242, 245, 0.95)),
-                        url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80');
-      background-size: cover;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
       background-attachment: fixed;
-      background-position: center;
       font-size: 1.05rem;
-    }
-
-    /* Glass effect utility class */
-    .glass-card {
-      background: var(--glass);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
     }
 
     /* Header & Navigation */
     header {
-      background: rgba(28, 31, 42, 0.85);
+      background: rgba(28, 31, 42, 0.95);
       color: var(--light);
       padding: 15px 5%;
       position: sticky;
@@ -69,6 +56,7 @@
       z-index: 1000;
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .header-container {
@@ -113,7 +101,6 @@
       font-family: 'Playfair Display', serif;
       letter-spacing: 1px;
       }
-
 
     nav ul {
       display: flex;
@@ -1267,8 +1254,6 @@
         <h3>Legal</h3>
         <ul>
           <li><a href="about-us.html">About Us</a></li>
-          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
         </ul>
       </div>
 

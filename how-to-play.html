@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Play | DhanYatra - Fantasy Stock Trading</title>
+  <title>How To Play - DY</title>
 
   <!-- Favicon (Logo in Browser Tab) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    
     :root {
       --primary: #1c1f2a;
       --secondary: #2d3246;
@@ -28,28 +29,26 @@
       --glass: rgba(255, 255, 255, 0.08);
       --border: rgba(255, 255, 255, 0.1);
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       background-color: var(--light);
       color: var(--text);
       font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-      background-image: linear-gradient(rgba(240, 242, 245, 0.95), rgba(240, 242, 245, 0.95)), 
-                        url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80');
-      background-size: cover;
+      line-height: 1.7;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
       background-attachment: fixed;
-      background-position: center;
+      font-size: 1.05rem;
     }
-    
+
     /* Header & Navigation */
     header {
-      background: rgba(28, 31, 42, 0.85);
+      background: rgba(28, 31, 42, 0.95);
       color: var(--light);
       padding: 15px 5%;
       position: sticky;
@@ -57,8 +56,9 @@
       z-index: 1000;
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     .header-container {
       display: flex;
       justify-content: space-between;
@@ -66,7 +66,7 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-    
+
     .logo {
       display: flex;
       align-items: center;
@@ -101,13 +101,13 @@
       font-family: 'Playfair Display', serif;
       letter-spacing: 1px;
       }
-    
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 30px;
     }
-    
+
     nav a {
       color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
@@ -116,12 +116,12 @@
       position: relative;
       padding: 5px 0;
     }
-    
+
     nav a:hover,
     nav a.active {
       color: var(--accent-light);
     }
-    
+
     nav a::after {
       content: '';
       position: absolute;
@@ -132,12 +132,12 @@
       background-color: var(--accent-light);
       transition: var(--transition);
     }
-    
+
     nav a:hover::after,
     nav a.active::after {
       width: 100%;
     }
-    
+
     .cta-button {
       background: linear-gradient(135deg, var(--accent), var(--accent-light));
       color: var(--dark);
@@ -149,11 +149,17 @@
       transition: var(--transition);
       font-size: 1rem;
       box-shadow: 0 4px 15px rgba(192, 160, 98, 0.3);
+      outline: none;
     }
-    
+
     .cta-button:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(192, 160, 98, 0.4);
+    }
+
+    .cta-button:focus-visible {
+      outline: 2px solid var(--accent-light);
+      outline-offset: 3px;
     }
     
     /* Hero Section */
@@ -399,35 +405,118 @@
       margin: 0 auto;
     }
     
-    .scoring-table {
-      width: 100%;
-      border-collapse: collapse;
+    .scoring-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
       margin: 40px 0;
+    }
+    
+    .scoring-card {
       background: white;
-      border-radius: 15px;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--accent);
+      position: relative;
       overflow: hidden;
-      box-shadow: var(--shadow);
     }
     
-    .scoring-table th {
+    .scoring-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    .scoring-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .scoring-icon {
+      width: 50px;
+      height: 50px;
       background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-size: 1.5rem;
       color: var(--dark);
-      padding: 15px;
-      text-align: left;
+    }
+    
+    .scoring-card h3 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin: 0;
+    }
+    
+    .scoring-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .point-item {
+      background: rgba(192, 160, 98, 0.1);
+      border-radius: 8px;
+      padding: 12px 15px;
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .point-title {
       font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     
-    .scoring-table td {
-      padding: 15px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    .point-title i {
+      color: var(--accent);
     }
     
-    .scoring-table tr:last-child td {
-      border-bottom: none;
+    .point-value {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 5px;
     }
     
-    .scoring-table tr:nth-child(even) {
-      background-color: #f9f9f9;
+    .luck-wheel {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin: 50px 0;
+      text-align: center;
+      border-top: 4px solid var(--accent);
+    }
+    
+    .luck-wheel h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .luck-wheel p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+    
+    .luck-wheel .highlight {
+      color: var(--accent);
+      font-weight: 600;
     }
     
     /* Tips Section */
@@ -658,6 +747,17 @@
       100% { transform: rotate(360deg); }
     }
     
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     /* Responsive Design */
     @media (max-width: 768px) {
       .header-container {
@@ -687,6 +787,10 @@
         flex-direction: column;
         align-items: center;
       }
+      
+      .scoring-card {
+        min-width: 100%;
+      }
     }
   </style>
 </head>
@@ -696,7 +800,7 @@
     <div class="header-container">
       <a href="#" class="logo">
         <div class="logo-icon">
-          <img src="images/logo.png">
+         <img src="images/logo.png">
         </div>
         <div class="logo-text">DhanYatra</div>
       </a>
@@ -844,56 +948,155 @@
     </div>
   </section>
 
-  <!-- Scoring System -->
+  <!-- Updated Scoring System -->
   <section class="scoring-system">
     <div class="section-title">
-      <h2>Scoring System</h2>
-      <p>How your portfolio performance is calculated</p>
+      <h2>Game Scoring System</h2>
+      <p>Earn points through strategic trading and challenges</p>
     </div>
     
     <div class="scoring-container">
-      <table class="scoring-table">
-        <thead>
-          <tr>
-            <th>Component</th>
-            <th>Description</th>
-            <th>Points Calculation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Portfolio Value</td>
-            <td>Total value of all your holdings</td>
-            <td>Closing price × Quantity held</td>
-          </tr>
-          <tr>
-            <td>Daily Returns</td>
-            <td>Percentage change in portfolio value</td>
-            <td>(Today's value - Yesterday's value) ÷ Yesterday's value</td>
-          </tr>
-          <tr>
-            <td>Consistency Bonus</td>
-            <td>Reward for positive daily returns</td>
-            <td>+10 points for each day with positive returns</td>
-          </tr>
-          <tr>
-            <td>Diversification</td>
-            <td>Holding stocks from multiple sectors</td>
-            <td>+5 points per unique sector (max 25 points)</td>
-          </tr>
-          <tr>
-            <td>Transaction Fees</td>
-            <td>Cost of buying/selling stocks</td>
-            <td>0.5% of transaction value deducted</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="scoring-cards">
+        <!-- Profit Points -->
+        <div class="scoring-card">
+          <div class="scoring-header">
+            <div class="scoring-icon">
+              <i class="fas fa-coins"></i>
+            </div>
+            <h3>Profit Points</h3>
+          </div>
+          <p>Earn points based on your trading profits:</p>
+          <div class="scoring-points">
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-money-bill-wave"></i> Profit Bonus</div>
+              <div>10 points for every Rs. 1000 profit</div>
+              <div class="point-value">+10 pts / ₹1k</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Risk Points -->
+        <div class="scoring-card">
+          <div class="scoring-header">
+            <div class="scoring-icon">
+              <i class="fas fa-skull"></i>
+            </div>
+            <h3>Risk Points</h3>
+          </div>
+          <p>Take calculated risks to earn bonus points:</p>
+          <div class="scoring-points">
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-chart-line"></i> Volatile Stocks</div>
+              <div>Holding high-volatility stocks</div>
+              <div class="point-value">+10 pts</div>
+            </div>
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-tachometer-alt"></i> Low Volume Stocks</div>
+              <div>Buying stocks with low trading volume</div>
+              <div class="point-value">+10 pts</div>
+            </div>
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-weight-hanging"></i> Heavy Allocation</div>
+              <div>Allocating 60%+ to one stock</div>
+              <div class="point-value">+5 pts</div>
+            </div>
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-exchange-alt"></i> Timing Mastery</div>
+              <div>Selling during dip & rebuying correctly</div>
+              <div class="point-value">+10 pts</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Diversification Points -->
+        <div class="scoring-card">
+          <div class="scoring-header">
+            <div class="scoring-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3>Diversification Points</h3>
+          </div>
+          <p>Spread your investments to earn more:</p>
+          <div class="scoring-points">
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-layer-group"></i> Sector Spread</div>
+              <div>Holding stocks across 4+ sectors</div>
+              <div class="point-value">+5 pts</div>
+            </div>
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-sync-alt"></i> Trading Activity</div>
+              <div>Each trade you make earns points</div>
+              <div class="point-value">+1 pt/trade</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Challenge Points -->
+        <div class="scoring-card">
+          <div class="scoring-header">
+            <div class="scoring-icon">
+              <i class="fas fa-flag-checkered"></i>
+            </div>
+            <h3>Challenge Points</h3>
+          </div>
+          <p>Complete challenges for bonus points:</p>
+          <div class="scoring-points">
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-bolt"></i> Trading Streak</div>
+              <div>Make 3 trades in 2 days</div>
+              <div class="point-value">+10 pts</div>
+            </div>
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-bullseye"></i> Sector Specialist</div>
+              <div>Hold 3 stocks from same sector</div>
+              <div class="point-value">+8 pts</div>
+            </div>
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-rocket"></i> Early Bird</div>
+              <div>Execute trade in first 30 minutes</div>
+              <div class="point-value">+7 pts</div>
+            </div>
+            <div class="point-item">
+              <div class="point-title"><i class="fas fa-crown"></i> Top Performer</div>
+              <div>Be in top 10% for a day</div>
+              <div class="point-value">+15 pts</div>
+            </div>
+          </div>
+        </div>
+      </div>
       
+      <!-- Luck Wheel Section -->
+      <div class="luck-wheel">
+        <h3><i class="fas fa-dice"></i> Luck Points Wheel</h3>
+        <p>Spin the wheel daily for bonus points! Randomly selected players will receive extra points ranging from <span class="highlight">+5 to +100 points</span>.</p>
+        <p>Every player gets one free spin per day, and additional spins can be earned by completing challenges.</p>
+      </div>
+      
+      <!-- Example Calculation -->
       <div style="margin-top: 40px; background: white; padding: 30px; border-radius: 15px; box-shadow: var(--shadow);">
-        <h3 style="color: var(--primary); margin-bottom: 20px;">Final Score Calculation</h3>
-        <p style="margin-bottom: 15px;">Your final score = Portfolio Value + (Daily Returns × 1000) + Consistency Bonus + Diversification Bonus</p>
-        <p style="font-weight: 500;">Example: A portfolio worth ₹115,000 with 3 days of positive returns and stocks from 4 sectors would score:</p>
-        <p>115,000 + (15% × 1000 = 150) + (3 × 10 = 30) + (4 × 5 = 20) = <strong>115,200 points</strong></p>
+        <h3 style="color: var(--primary); margin-bottom: 20px;">Example Point Calculation</h3>
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin-bottom: 20px;">
+          <div>Profit: ₹15,000</div>
+          <div style="text-align: right; font-weight: 600;">150 points (15 × 10)</div>
+          <div>Held 2 volatile stocks</div>
+          <div style="text-align: right; font-weight: 600;">20 points</div>
+          <div>Bought 1 low volume stock</div>
+          <div style="text-align: right; font-weight: 600;">10 points</div>
+          <div>60% allocation to one stock</div>
+          <div style="text-align: right; font-weight: 600;">5 points</div>
+          <div>Stocks across 5 sectors</div>
+          <div style="text-align: right; font-weight: 600;">5 points</div>
+          <div>12 trades made</div>
+          <div style="text-align: right; font-weight: 600;">12 points</div>
+          <div>Completed "3 trades in 2 days" challenge</div>
+          <div style="text-align: right; font-weight: 600;">10 points</div>
+          <div>Wheel spin bonus</div>
+          <div style="text-align: right; font-weight: 600;">20 points</div>
+        </div>
+        <div style="border-top: 2px solid var(--accent); padding-top: 15px; font-weight: 700; font-size: 1.3rem; display: flex; justify-content: space-between;">
+          <div>TOTAL POINTS:</div>
+          <div>232 points</div>
+        </div>
       </div>
     </div>
   </section>
@@ -978,7 +1181,7 @@
         <p>Fantasy stock trading platform where you can win real cash prizes. Entry fee: Only Rs. 11!</p>
         
         <div class="social-links">
-          <a href="facebook.com/profile.php?id=61577630865234" class="social-link"><i class="fab fa-facebook-f" target="_blank" rel="noopener noreferrer"></i></a>
+          <a href="facebook.com/profile.php?id=61577630865234" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/dhanyatra.np/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
@@ -998,8 +1201,6 @@
         <h3>Legal</h3>
         <ul>
           <li><a href="about-us.html">About Us</a></li>
-          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -1019,7 +1220,7 @@
   </footer>
 
   <script>
-    // Simple animation for step cards
+    // Animation for step cards
     document.querySelectorAll('.step-card').forEach(card => {
       card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-10px)';
@@ -1028,6 +1229,16 @@
       card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0)';
       });
+    });
+    
+    // Animation for scoring cards
+    document.querySelectorAll('.scoring-card').forEach((card, index) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      
+      setTimeout(() => {
+        card.style.animation = `fadeInUp 0.6s ease forwards ${index * 0.2}s`;
+      }, 500);
     });
   </script>
 </body>
